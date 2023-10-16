@@ -1,0 +1,40 @@
+@use "../../styles/variables" as variable;
+.navigation {
+  background-color: variable.$first;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.list_mobile {
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  top: 100%;
+  width: 90%;
+  position: absolute;
+}
+.list_item {
+  padding: 0.3rem;
+}
+.list_desktop {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .bar_icon {
+    display: none;
+  }
+  .list_mobile {
+    position: static;
+  }
+  .list_desktop {
+    display: flex;
+  }
+}
